@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
     def index
         stories = Story.all
 
-        render json: stories
+        render json: stories, include: {:characters => {only: [:id, :name, :age, :sex, :history]}}, except: :updated_at
     end
 
     def show

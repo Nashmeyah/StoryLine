@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
 
     def index
         characters = Character.all
-        render json: characters
+        render json: characters, except: :updated_at
     end
 
     def show

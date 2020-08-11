@@ -9,7 +9,7 @@ export default (state = { stories: [], loading: false }, action) => {
     case "STORIES_LOADED":
       return {
         ...state,
-        stories: stories,
+        stories: action.payload,
         loading: false,
       };
     default:

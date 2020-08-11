@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { getStories } from "./actions/stories";
 import "./App.css";
 
 class App extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.getStories();
+  }
   render() {
     const stories = this.props.stories.map((story, index) => (
       <li key={index}> {story.title}</li>
@@ -23,4 +26,4 @@ const mapStateToProps = (state) => {
     loading: state.storyReducer.loading,
   };
 };
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { getStories })(App);

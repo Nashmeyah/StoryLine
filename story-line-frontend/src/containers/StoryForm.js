@@ -52,4 +52,4 @@ class StoryForm extends Component {
     );
   }
 }
-export default connect(null, addStory)(StoryForm);
+export default connect(null, { addStory })(StoryForm);

@@ -12,6 +12,19 @@ export default (state = { stories: [], loading: false }, action) => {
         stories: action.payload,
         loading: false,
       };
+
+    case "ADD_STORY":
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case "STORY_ADDED":
+      return {
+        ...state,
+        stories: [...state.stories, action.payload],
+        loading: false,
+      };
     default:
       return state;
   }

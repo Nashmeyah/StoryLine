@@ -25,6 +25,22 @@ export default (state = { stories: [], loading: false }, action) => {
         stories: [...state.stories, action.payload],
         loading: false,
       };
+
+    case "DELETE_STORY":
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case "STORY_DELETED":
+      return {
+        ...state,
+        stories: [
+          ...state.stories.filter((story) => `${story.id}` !== action.payload),
+        ],
+        loading: false,
+      };
+
     default:
       return state;
   }

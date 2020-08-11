@@ -23,3 +23,15 @@ export const addStory = (story) => {
       .then((story) => dispatch({ type: "STORY_ADDED", payload: story }));
   };
 };
+
+export const deleteStory = (id) => {
+  return (dispatch) => {
+    dispatch({ type: "DELETE_STORY" });
+    fetch(`/stories/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(() => dispatch({ type: "STORY_DELETED", payload: id }));
+  };
+};

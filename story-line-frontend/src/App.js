@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getStories } from "./actions/stories";
 import "./App.css";
+import StoryForm from "./containers/StoryForm";
 
 class App extends Component {
   componentDidMount() {
@@ -13,6 +14,8 @@ class App extends Component {
     ));
     return (
       <div className="App">
+        <h2>Create new story</h2>
+        <StoryForm />
         <h1>StoryLine Creator</h1>
         <ul>{this.props.loading ? <h3>Loading...</h3> : stories}</ul>
       </div>

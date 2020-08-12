@@ -18,7 +18,7 @@ export default class Navbar extends Component {
           Home
         </NavLink>
         <NavLink
-          to="/characters"
+          to="/stories"
           exact
           style={link}
           activeStyle={{ background: "blue" }}

@@ -30,8 +30,8 @@ class StoryForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const story = {
-      [e.target.title]: this.state.title,
-      [e.target.body]: this.state.body,
+      title: this.state.title,
+      body: this.state.body,
     };
     this.props.addStory(story);
     this.setState({

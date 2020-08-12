@@ -1,35 +1,32 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getStories, deleteStory } from "../actions/stories";
-class Home extends Component {
+class Characters extends Component {
   componentDidMount() {
     this.props.getStories();
   }
-  handleClick = (e) => {
-    this.props.deleteStory(e.target.id);
-  };
   render() {
     const stories = this.props.stories.map((story, index) => (
-      <li key={index}>
-        {story.title}
-        <button id={story.id} onClick={this.handleClick}>
-          Delete Story
-        </button>
-      </li>
+      <div>
+        <h3>{story.title}</h3>
+        <p>{story.body}</p>
+      </div>
     ));
     return (
       <div>
-        <h2>Create new story</h2>
-        <ul>{this.props.loading ? <h3>Loading...</h3> : stories}</ul>
+        This is a page to render all Characters
+        <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div>
       </div>
     );
   }
 }
-
 const mapStateToProps = (state) => {
   return {
     stories: state.storyReducer.stories,
     loading: state.storyReducer.loading,
   };
 };
-export default connect(mapStateToProps, { getStories, deleteStory })(Home);
+
+export default connect(mapStateToProps, { getStories, deleteStory })(
+  Characters
+);

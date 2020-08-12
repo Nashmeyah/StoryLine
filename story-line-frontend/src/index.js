@@ -8,6 +8,9 @@ import rootReducer from "./reducers/index";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Characters from "./components/Characters";
 
 const store = createStore(
   rootReducer,
@@ -16,7 +19,13 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <div>
+        <Navbar />
+        <Route exact path="/" component={App} />
+        <Route exact path="/characters" component={Characters} />
+      </div>
+    </Router>
   </Provider>,
   document.getElementById("root")
 );

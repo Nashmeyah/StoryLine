@@ -22,6 +22,14 @@ export default class Navbar extends Component {
         >
           Home
         </NavLink>
+        <NavLink
+          to="/characters"
+          exact
+          style={link}
+          activeStyle={{ background: "darkblue" }}
+        >
+          Characters
+        </NavLink>
       </div>
     );
   }

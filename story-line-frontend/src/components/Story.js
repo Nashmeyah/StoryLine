@@ -5,10 +5,16 @@ class Characters extends Component {
   componentDidMount() {
     this.props.getStories();
   }
+  handleClick = (e) => {
+    this.props.deleteStory(e.target.id);
+  };
   render() {
     const stories = this.props.stories.map((story, index) => (
       <div key={index}>
         <h3>{story.title}</h3>
+        <button id={story.id} onClick={this.handleClick}>
+          Delete Story
+        </button>
         <p>{story.body}</p>
         {console.log(story)}
         Characters --
@@ -21,7 +27,6 @@ class Characters extends Component {
     ));
     return (
       <div>
-        This is a page to render all Characters
         <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div>
       </div>
     );

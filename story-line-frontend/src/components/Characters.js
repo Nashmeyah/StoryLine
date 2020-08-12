@@ -7,9 +7,16 @@ class Characters extends Component {
   }
   render() {
     const stories = this.props.stories.map((story, index) => (
-      <div>
+      <div key={index}>
         <h3>{story.title}</h3>
         <p>{story.body}</p>
+        {console.log(story)}
+        Characters --
+        <ul>
+          {story.characters.map((character) => (
+            <li>{character.name}</li>
+          ))}
+        </ul>
       </div>
     ));
     return (

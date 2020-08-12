@@ -28,7 +28,7 @@ class CharactersController < ApplicationController
     private
 
     def set_characters
-        @characters = Character.find_by(params[:id])
+        @characters = Character.find(params[:id])
     end
 
 

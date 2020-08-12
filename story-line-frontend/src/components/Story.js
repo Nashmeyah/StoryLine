@@ -11,13 +11,13 @@ class Characters extends Component {
   render() {
     const stories = this.props.stories.map((story, index) => (
       <div key={index}>
-        <h3>{story.title}</h3>
+        <h1>{story.title}</h1>
         <button id={story.id} onClick={this.handleClick}>
           Delete Story
         </button>
         <p>{story.body}</p>
         {console.log(story)}
-        Characters --
+        <h3>Characters--</h3>
         <ul>
           {story.characters.map((character, index) => (
             <li key={index}>{character.name}</li>

@@ -58,6 +58,7 @@ class StoryForm extends Component {
             value={this.state.body}
             onChange={this.handleOnBodyChange}
           />
+
           <br />
           <input type="Submit" />
         </form>

@@ -5,7 +5,7 @@ const link = {
   width: "100px",
   paddings: "12px",
   margin: "0, 6px 6px",
-  background: "blue",
+  background: "turquoise",
   textDecoration: "none",
   color: "white",
 };
@@ -13,20 +13,15 @@ const link = {
 export default class Navbar extends Component {
   render() {
     return (
-      <div>
-        <NavLink
-          to="/"
-          exact
-          style={link}
-          activeStyle={{ background: "darkblue" }}
-        >
+      <div className="navbar">
+        <NavLink to="/" exact style={link} activeStyle={{ background: "blue" }}>
           Home
         </NavLink>
         <NavLink
           to="/characters"
           exact
           style={link}
-          activeStyle={{ background: "darkblue" }}
+          activeStyle={{ background: "blue" }}
         >
           All Stories
         </NavLink>

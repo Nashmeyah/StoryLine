@@ -19,14 +19,6 @@ class StoryForm extends Component {
       body: e.target.value,
     });
   };
-
-  // handleChange = (e) => {
-  //   this.setState({
-  //     [e.target.title]: e.target.value,
-  //     [e.target.body]: e.target.value,
-  //   });
-  // };
-
   handleSubmit = (e) => {
     e.preventDefault();
     const story = {
@@ -47,7 +39,7 @@ class StoryForm extends Component {
           <input
             type="text"
             name="title"
-            value={this.state.tite}
+            value={this.state.title}
             onChange={this.handleOnTitleChange}
           />
 

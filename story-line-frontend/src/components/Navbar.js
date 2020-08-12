@@ -28,7 +28,7 @@ export default class Navbar extends Component {
           style={link}
           activeStyle={{ background: "darkblue" }}
         >
-          Characters
+          All Stories
         </NavLink>
       </div>
     );

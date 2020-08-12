@@ -10,17 +10,17 @@ class Home extends Component {
   };
   render() {
     const stories = this.props.stories.map((story, index) => (
-      <li key={index}>
+      <p key={index}>
         {story.title}
         <button id={story.id} onClick={this.handleClick}>
           Delete Story
         </button>
-      </li>
+      </p>
     ));
     return (
       <div>
         <h2>Create new story</h2>
-        <ul>{this.props.loading ? <h3>Loading...</h3> : stories}</ul>
+        <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div>
       </div>
     );
   }

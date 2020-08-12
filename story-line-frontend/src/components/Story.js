@@ -13,8 +13,8 @@ class Characters extends Component {
         {console.log(story)}
         Characters --
         <ul>
-          {story.characters.map((character) => (
-            <li>{character.name}</li>
+          {story.characters.map((character, index) => (
+            <li key={index}>{character.name}</li>
           ))}
         </ul>
       </div>

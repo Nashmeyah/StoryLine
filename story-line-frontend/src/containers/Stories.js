@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { getStories, deleteStory } from "../actions/stories";
 import Story from "../components/Story";
 
-class Characters extends Component {
+class Stories extends Component {
   componentDidMount() {
     this.props.getStories();
   }
   handleClick = (e) => {
     this.props.deleteStory(e.target.id);
   };
+
   render() {
     const stories = this.props.stories.map((story, index) => (
       <Story key={index} story={story} handleClick={this.handleClick} />
@@ -29,6 +30,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getStories, deleteStory })(
-  Characters
-);
+export default connect(mapStateToProps, { getStories, deleteStory })(Stories);

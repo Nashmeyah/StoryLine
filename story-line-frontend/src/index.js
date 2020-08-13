@@ -11,6 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Stories from "./containers/Stories";
+import Character from "./components/Character";
 
 const store = createStore(
   rootReducer,
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Navbar />
         <Route exact path="/" component={App} />
         <Route exact path="/stories" component={Stories} />
+        <Route exact path="/characters" component={Character} />
       </div>
     </Router>
   </Provider>,

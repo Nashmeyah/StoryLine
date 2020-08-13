@@ -1,10 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Character from "./Character";
 
 const Story = (props) => {
-  // const handleClick = (e) => {
-  //   props.deleteStory(e.target.id);
-  // };
-  // debugger;
   return (
     <div>
       {console.log(props.story)}
@@ -13,13 +11,10 @@ const Story = (props) => {
         Delete Story
       </button>
       <p>{props.story.body}</p>
-
-      <h3>Characters--</h3>
-      <ul>
-        {props.story.characters.map((character, index) => (
-          <li key={index}>{character.name}</li>
-        ))}
-      </ul>
+      <NavLink to="/characters" exact activeStyle={{ background: "blue" }}>
+        View Characters
+      </NavLink>
+      <Character props={props.story} />
     </div>
   );
 };

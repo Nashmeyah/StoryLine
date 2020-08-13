@@ -16,7 +16,7 @@ class Character extends Component {
     );
 
     // debugger;
-    console.log(stories);
+    // console.log(stories);
 
     return (
       <div>

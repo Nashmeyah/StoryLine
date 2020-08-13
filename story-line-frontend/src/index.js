@@ -11,7 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Stories from "./containers/Stories";
-import Character from "./components/Character";
+import Character from "./containers/Character";
 
 const store = createStore(
   rootReducer,

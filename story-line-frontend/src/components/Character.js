@@ -5,7 +5,7 @@ function Character(props) {
   return (
     <div>
       This is the character page
-      {console.log(props)}
+      {console.log(props.state)}
       {/* <h3>Characters--</h3>
       <ul>
         {props.story.characters.map((character, index) => (

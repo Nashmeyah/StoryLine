@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { getStories, deleteStory } from "../actions/stories";
 import Story from "../components/Story";
 
-
 class Characters extends Component {
   componentDidMount() {
     this.props.getStories();
@@ -13,9 +12,7 @@ class Characters extends Component {
   };
   render() {
     const stories = this.props.stories.map((story, index) => (
-    
       <Story key={index} story={story} handleClick={this.handleClick} />
-     
     ));
     return (
       <div>
@@ -24,6 +21,7 @@ class Characters extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     stories: state.storyReducer.stories,

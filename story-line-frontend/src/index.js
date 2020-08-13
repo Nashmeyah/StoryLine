@@ -25,7 +25,10 @@ ReactDOM.render(
         <Navbar />
         <Route exact path="/" component={App} />
         <Route exact path="/stories" component={Stories} />
-        <Route exact path="/characters" component={Character} />
+
+        <Route path="/characters">
+          <Character data={"nash"} />
+        </Route>
       </div>
     </Router>
   </Provider>,

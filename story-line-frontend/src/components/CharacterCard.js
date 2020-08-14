@@ -1,5 +1,5 @@
 //this will render a card for each character
-import React, { Component } from "react";
+import React from "react";
 
 const CharacterCard = ({ story }) => {
   // console.log(story);

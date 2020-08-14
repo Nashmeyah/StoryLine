@@ -1,0 +1,50 @@
+import React, { useState } from "react";
+
+const StoryForm = (props) => {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+
+  const handleOnTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const handleOnBodyChange = (event) => {
+    setBody(event.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const story = {
+      title,
+      body,
+    };
+    props.addStory(story);
+    setTitle("");
+    setBody("");
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <p>Title:</p>
+        <input
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleOnTitleChange}
+        />
+
+        <p>Story Body:</p>
+        <textarea
+          type="text"
+          name="body"
+          value={body}
+          onChange={handleOnBodyChange}
+        />
+        <br />
+        <input type="Submit" />
+      </form>
+    </div>
+  );
+};
+export default StoryForm;

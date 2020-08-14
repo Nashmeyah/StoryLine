@@ -22,7 +22,7 @@ class App extends Component {
               exact
               path="/stories/new"
               render={(props) => (
-                <StoryForm handleOnSubmit={this.props.addStory} />
+                <StoryForm createStory={this.props.addStory} />
               )}
             />
             <Route path="/characters/:id" component={Character} />

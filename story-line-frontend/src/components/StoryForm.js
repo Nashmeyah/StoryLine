@@ -18,7 +18,7 @@ const StoryForm = (props) => {
       title,
       body,
     };
-    props.handleOnSubmit(story);
+    props.createStory(story);
     setTitle("");
     setBody("");
   };

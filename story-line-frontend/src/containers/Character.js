@@ -18,12 +18,7 @@ class Character extends Component {
     // debugger;
     // console.log(stories);
 
-    return (
-      <div>
-        {/* <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div> */}
-        {stories && <CharacterCard story={stories.characters} />}
-      </div>
-    );
+    return <div>{stories && <CharacterCard story={stories.characters} />}</div>;
   }
 }
 const mapStateToProps = (state) => {

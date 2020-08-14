@@ -12,8 +12,8 @@ const StoryForm = (props) => {
     setBody(event.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const story = {
       title,
       body,

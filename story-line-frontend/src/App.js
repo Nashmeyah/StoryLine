@@ -21,7 +21,9 @@ class App extends Component {
             <Route
               exact
               path="/stories/new"
-              render={(props) => <StoryForm addStory={addStory} />}
+              render={(props) => (
+                <StoryForm handleOnSubmit={this.props.addStory} />
+              )}
             />
             <Route path="/characters/:id" component={Character} />
           </div>

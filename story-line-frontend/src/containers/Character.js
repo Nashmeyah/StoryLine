@@ -12,7 +12,7 @@ class Character extends Component {
     // console.log(this.props.match);
 
     const stories = this.props.stories.find(
-      (story) => story.id == this.props.match.params.id
+      (story) => story.id === this.props.match.params.id
     );
 
     // debugger;

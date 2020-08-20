@@ -5,6 +5,7 @@ const CharacterCard = ({ story }) => {
   // console.log(story);
   const characters = story.map((char, index) => (
     <div key={index}>
+      <p>Here is your characters</p>
       <h1>Name:</h1>
       <h3>{char.name}</h3>
       <h1>Age:</h1>

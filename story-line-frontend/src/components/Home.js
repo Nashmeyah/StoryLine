@@ -1,11 +1,13 @@
 import React from "react";
+import Header from "./Header";
 
-function Home() {
+const Home = () => {
   return (
     <div>
-      <h1>Welcome to my app! Nancy says have fun :D!!</h1>
+      <Header />
+      <h2>Welcome to my app! Nancy says have fun :D!!</h2>
     </div>
   );
-}
+};
 
 export default Home;

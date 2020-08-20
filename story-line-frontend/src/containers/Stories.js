@@ -7,6 +7,7 @@ class Stories extends Component {
   componentDidMount() {
     this.props.getStories();
   }
+
   handleClick = (e) => {
     this.props.deleteStory(e.target.id);
   };
@@ -15,6 +16,7 @@ class Stories extends Component {
     const stories = this.props.stories.map((story, index) => (
       <Story key={index} story={story} handleClick={this.handleClick} />
     ));
+
     return (
       <div>
         <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div>
@@ -24,6 +26,8 @@ class Stories extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
+
   return {
     stories: state.storyReducer.stories,
     loading: state.storyReducer.loading,

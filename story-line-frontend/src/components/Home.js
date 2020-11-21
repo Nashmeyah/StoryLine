@@ -5,7 +5,10 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <h2>Welcome to my app! Nancy says have fun :D!!</h2>
+      <h2>
+        Welcome to the StoryLine creator, this app allows you to create stories
+        and share them when youre ready!
+      </h2>
     </div>
   );
 };

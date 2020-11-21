@@ -2,7 +2,8 @@ import React from "react";
 
 const Header = () => {
   const headStyle = {
-    color: "#4d4dff",
+    color: "white",
+    fontSize: "50px",
   };
   return (
     <div>

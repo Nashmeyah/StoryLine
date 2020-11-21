@@ -5,6 +5,11 @@ const Home = () => {
   const style = {
     color: "white",
     fontSize: "30px",
+    display: "flex",
+    flexWrap: "wrap",
+    width: "500px",
+    padding: "20px",
+    margin: "auto",
   };
   return (
     <div>

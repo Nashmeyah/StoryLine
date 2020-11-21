@@ -1,12 +1,16 @@
-body {
-  height: 743px;
-  background-image: url(./img/book-1240762-1279x852.jpg);
+
+html{
+  
+  background-image: url(./img/rhema-kallianpur-2W3bDp7K1oQ-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'PT Serif', serif;
-  color: white;
-  
+ 
 }
+body {
+  height: 743px;
+  font-family: 'PT Serif', serif;
+}
+
 
 .navbar{
   font-size: 23px;

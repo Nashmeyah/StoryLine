@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   const headStyle = {
-    color: "blue",
+    color: "#4d4dff",
   };
   return (
     <div>

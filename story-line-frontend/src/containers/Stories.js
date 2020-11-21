@@ -4,6 +4,9 @@ import { getStories, deleteStory } from "../actions/stories";
 import Story from "../components/Story";
 
 class Stories extends Component {
+  state = {
+    search: "",
+  };
   componentDidMount() {
     this.props.getStories();
   }
@@ -12,14 +15,35 @@ class Stories extends Component {
     this.props.deleteStory(e.target.id);
   };
 
+  filterSearch = (event) => {
+    // console.log(event.target.value);
+    this.setState({
+      search: event.target.value,
+    });
+  };
+
   render() {
-    const stories = this.props.stories.map((story, index) => (
+    const filteredResults = this.props.stories.filter((story) => {
+      return (
+        story.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !==
+        -1
+      );
+    });
+
+    const stories = filteredResults.map((story, index) => (
       <Story key={index} story={story} handleClick={this.handleClick} />
     ));
 
     return (
       <div>
-        <div>{this.props.loading ? <h3>Loading...</h3> : stories}</div>
+        <div>
+          <input
+            type="text"
+            placeholder="Search Stories"
+            onChange={this.filterSearch}
+          />
+          {this.props.loading ? <h3>Loading...</h3> : stories}
+        </div>
       </div>
     );
   }

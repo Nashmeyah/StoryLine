@@ -8,6 +8,10 @@ class Character extends Component {
     this.props.getStories();
   }
 
+  showForm = () => {
+    console.log("Form button was clicked");
+  };
+
   render() {
     // console.log(this.props.match);
 
@@ -18,7 +22,12 @@ class Character extends Component {
     // debugger;
     // console.log(stories);
 
-    return <div>{stories && <CharacterCard story={stories.characters} />}</div>;
+    return (
+      <div>
+        <button onClick={this.showForm}>Add New Character</button>
+        {stories && <CharacterCard story={stories.characters} />}
+      </div>
+    );
   }
 }
 const mapStateToProps = (state) => {

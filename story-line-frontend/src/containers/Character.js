@@ -13,6 +13,9 @@ class Character extends Component {
   };
 
   render() {
+    const characters_list_style = {
+      display: "flex",
+    };
     // console.log(this.props.match);
 
     const stories = this.props.stories.find(
@@ -25,7 +28,9 @@ class Character extends Component {
     return (
       <div>
         <button onClick={this.showForm}>Add New Character</button>
-        {stories && <CharacterCard story={stories.characters} />}
+        <div style={characters_list_style}>
+          {stories && <CharacterCard story={stories.characters} />}
+        </div>
       </div>
     );
   }

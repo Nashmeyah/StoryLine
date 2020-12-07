@@ -2,9 +2,12 @@
 import React from "react";
 
 const CharacterCard = ({ story }) => {
+  const style = {
+    display: "flex",
+  };
   // console.log(story);
   const characters = story.map((char, index) => (
-    <div key={index}>
+    <div style={style} key={index}>
       <p>Here is your characters</p>
       <h1>Name:</h1>
       <h3>{char.name}</h3>

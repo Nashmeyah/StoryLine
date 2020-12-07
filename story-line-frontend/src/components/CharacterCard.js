@@ -4,6 +4,8 @@ import React from "react";
 const CharacterCard = ({ story }) => {
   const style = {
     display: "flex",
+    flexDirection: "row",
+    color: "white",
   };
   // console.log(story);
   const characters = story.map((char, index) => (

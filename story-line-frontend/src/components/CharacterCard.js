@@ -1,4 +1,4 @@
-//this will render a card for each character
+//render a card for each character
 import React from "react";
 
 const CharacterCard = ({ story }) => {
@@ -19,7 +19,6 @@ const CharacterCard = ({ story }) => {
       <h1>Name:</h1>
       <h3>{char.name}</h3>
       <h1>Age:</h1>
-
       <p>{char.age}</p>
       <h1>Sex:</h1>
 

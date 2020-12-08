@@ -41,6 +41,32 @@ export default (state = { stories: [], loading: false }, action) => {
         loading: false,
       };
 
+    //   case "LOADING_CHARACTERS":
+    //   return {
+    //     ...state,
+    //     loading: true,
+    //   };
+
+    // case "CHARACTERS_LOADED":
+    //   return {
+    //     ...state,
+    //     characters: action.payload,
+    //     loading: false,
+    //   };
+
+    // case "ADD_CHARACTER":
+    //   return {
+    //     ...state,
+    //     loading: true,
+    //   };
+
+    // case "CHARACTER_ADDED":
+    //   return {
+    //     ...state,
+    //     characters: [...state, action.payload],
+    //     loading: false,
+    //   };
+
     default:
       return state;
   }

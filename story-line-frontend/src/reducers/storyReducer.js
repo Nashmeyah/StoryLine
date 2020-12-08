@@ -1,4 +1,7 @@
-export default (state = { stories: [], loading: false }, action) => {
+export default (
+  state = { stories: [], characters: [], loading: false },
+  action
+) => {
   switch (action.type) {
     case "LOADING_STORIES":
       return {

@@ -35,3 +35,20 @@ export const deleteStory = (id) => {
     }).then(() => dispatch({ type: "STORY_DELETED", payload: id }));
   };
 };
+
+export const addCharacter = (character) => {
+  return (dispatch) => {
+    dispatch({ type: "ADD_CHARACTER" });
+    fetch("/stories", {
+      method: "POST",
+      body: JSON.stringify(character),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((story) =>
+        dispatch({ type: "CHARACTER_ADDED", payload: character })
+      );
+  };
+};

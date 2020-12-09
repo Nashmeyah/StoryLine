@@ -50,13 +50,13 @@ class Character extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    const character = {
-      charName,
-      charAge,
-      sex,
-      history,
-    };
-    props.createCharacter(character);
+    // const character = {
+    //   charName,
+    //   charAge,
+    //   sex,
+    //   history,
+    // };
+    // props.createCharacter(character);
   }
 
   showForm = () => {

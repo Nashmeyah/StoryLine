@@ -9,8 +9,11 @@ class Character extends Component {
     // Here we initialize our components state
     this.state = {
       showForm: false,
+      charName: "",
+      charAge: "",
+      sex: "",
+      history: "",
     };
-
     this.onClick = this.onClick.bind(this);
   }
   componentDidMount() {
@@ -19,6 +22,41 @@ class Character extends Component {
   onClick() {
     // On click we change our state – this will trigger our `render` method
     this.setState({ showForm: true });
+  }
+
+  handleOnNameChange(event) {
+    this.setState({
+      charName: event.target.value,
+    });
+  }
+
+  handleOnAgeChange(event) {
+    this.setState({
+      charAge: event.target.value,
+    });
+  }
+
+  handleOnSexChange(event) {
+    this.setState({
+      sex: event.target.value,
+    });
+  }
+
+  handleOnHistoryChange(event) {
+    this.setState({
+      history: event.target.value,
+    });
+  }
+
+  handleOnSubmit(event) {
+    event.preventDefault();
+    const character = {
+      charName,
+      charAge,
+      sex,
+      history,
+    };
+    props.createCharacter(character);
   }
 
   showForm = () => {

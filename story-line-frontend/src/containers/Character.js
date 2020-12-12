@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getStories } from "../actions/stories";
+import { getStories, addCharacter } from "../actions/stories";
 import CharacterCard from "../components/CharacterCard";
 
 class Character extends Component {
@@ -50,13 +50,13 @@ class Character extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    // const character = {
-    //   charName,
-    //   charAge,
-    //   sex,
-    //   history,
-    // };
-    // props.createCharacter(character);
+    const character = {
+      charName: this.state.charName,
+      charAge: this.state.charAge,
+      sex: this.state.sex,
+      history: this.state.history,
+    };
+    this.props.createCharacter(character);
   }
 
   showForm = () => {

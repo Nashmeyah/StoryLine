@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getStories, addCharacter } from "../actions/stories";
+import { getStories } from "../actions/stories";
 import CharacterCard from "../components/CharacterCard";
 import { Input } from "antd";
 
@@ -17,6 +17,7 @@ class Character extends Component {
     };
     this.onClick = this.onClick.bind(this);
   }
+
   componentDidMount() {
     this.props.getStories();
     console.log(this.props);

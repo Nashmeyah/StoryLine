@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Story = (props) => {
+  // console.log(props.story.characters);
   return (
     <div>
       <h1>{props.story.title}</h1>
@@ -10,7 +11,7 @@ const Story = (props) => {
       </button>
       <p>{props.story.body}</p>
       <NavLink
-        to={`/characters/${props.story.id}`}
+        to={`/stories/${props.story.id}/characters`}
         exact
         activeStyle={{ background: "blue" }}
       >

@@ -48,9 +48,11 @@ export default (state = { stories: [], loading: false }, action) => {
       };
 
     case "CHARACTER_ADDED":
+      let charid = action.payload.character.storyId;
+      console.log(charid);
       return {
         ...state,
-        stories: [...state.stories.characters, action.payload],
+        stories: [...state.stories[charid].characters, action.payload],
         loading: false,
       };
 

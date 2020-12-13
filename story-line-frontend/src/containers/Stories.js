@@ -50,7 +50,7 @@ class Stories extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
 
   return {
     stories: state.storyReducer.stories,

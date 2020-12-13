@@ -39,7 +39,7 @@ export const deleteStory = (id) => {
 export const addCharacter = (character) => {
   return (dispatch) => {
     dispatch({ type: "ADD_CHARACTER" });
-    fetch("/stories", {
+    fetch("/characters", {
       method: "POST",
       body: JSON.stringify(character),
       headers: {
@@ -47,7 +47,7 @@ export const addCharacter = (character) => {
       },
     })
       .then((response) => response.json())
-      .then((story) =>
+      .then((character) =>
         dispatch({ type: "CHARACTER_ADDED", payload: character })
       );
   };

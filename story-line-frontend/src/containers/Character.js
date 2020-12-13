@@ -18,6 +18,7 @@ class Character extends Component {
   }
   componentDidMount() {
     this.props.getStories();
+    console.log(this.props);
   }
   onClick() {
     // On click we change our state – this will trigger our `render` method

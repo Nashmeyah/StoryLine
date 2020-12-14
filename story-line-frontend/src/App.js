@@ -8,6 +8,7 @@ import Stories from "./containers/Stories";
 import Character from "./containers/Character";
 import StoryForm from "./components/StoryForm";
 import "./App.css";
+import CharacterForm from "./components/CharacterForm";
 
 class App extends Component {
   render() {
@@ -25,7 +26,13 @@ class App extends Component {
                 <StoryForm createStory={this.props.addStory} />
               )}
             />
-            <Route path="/stories/:id/characters/" component={Character} />
+            <Route
+              path="/stories/:id/characters/"
+              // component={}
+              render={(props) => (
+                <Character addCharacter={this.props.addCharacter} />
+              )}
+            />
           </div>
         </Router>
       </div>

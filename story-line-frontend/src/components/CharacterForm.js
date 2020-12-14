@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { addCharacter } from "../actions/stories";
 import { Input } from "antd";
 
 const CharacterForm = (props) => {
@@ -33,6 +32,7 @@ const CharacterForm = (props) => {
     //having trouble connecting to the action.
     props.addCharacter(character);
   };
+  console.log(props);
 
   return (
     <div>

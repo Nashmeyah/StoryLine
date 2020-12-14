@@ -22,6 +22,7 @@ const StoryForm = (props) => {
     setTitle("");
     setBody("");
   };
+  console.log(props);
 
   return (
     <div>

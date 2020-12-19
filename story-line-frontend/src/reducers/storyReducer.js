@@ -51,16 +51,8 @@ export default (state = { stories: [], loading: false }, action) => {
       };
 
     case "CHARACTER_ADDED":
-      const newChar = state.characters.concat({
-        id: action.id,
-        name: action.charName,
-        age: action.charAge,
-        sex: action.sex,
-        history: action.history,
-      });
-
       return {
-        stories: updateObject(state, { stories: newChar }),
+        stories: [...state.stories, action.payload],
         loading: false,
       };
 

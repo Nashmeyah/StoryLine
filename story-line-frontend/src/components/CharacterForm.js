@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Input } from "antd";
+import { addCharacter } from "../actions/stories";
 
 const CharacterForm = (props) => {
   const [charName, setcharName] = useState("");
@@ -29,9 +30,9 @@ const CharacterForm = (props) => {
       history,
     };
     //having trouble connecting to the action.
-    props.addCharacter(character);
+    addCharacter(character);
   };
-  console.log(props);
+  console.log(addCharacter);
 
   return (
     <div>

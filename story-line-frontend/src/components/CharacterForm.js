@@ -27,7 +27,6 @@ const CharacterForm = (props) => {
       charAge,
       sex,
       history,
-      storyId: props.match.params.id,
     };
     //having trouble connecting to the action.
     props.addCharacter(character);

@@ -7,7 +7,6 @@ const CharacterForm = (props) => {
   const [sex, setsex] = useState("");
   const [history, sethistory] = useState("");
 
-  const id = window.location.pathname;
   const handlecharName = (event) => {
     setcharName(event.target.value);
   };
@@ -22,6 +21,7 @@ const CharacterForm = (props) => {
   };
 
   const handleOnSubmit = (event) => {
+    const id = window.location.pathname;
     event.preventDefault();
     const character = {
       charName,
@@ -30,7 +30,7 @@ const CharacterForm = (props) => {
       history,
     };
     //having trouble connecting to the action.
-    props.addCharacter(character);
+    props.addCharacter(id, character);
   };
   console.log(props);
 

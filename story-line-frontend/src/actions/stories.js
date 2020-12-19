@@ -39,7 +39,7 @@ export const deleteStory = (id) => {
 export const addCharacter = (id, character) => {
   return (dispatch) => {
     dispatch({ type: "ADD_CHARACTER" });
-    fetch(`/stories/${id}/characters`, {
+    fetch(`${id}`, {
       method: "POST",
       body: JSON.stringify(character),
       headers: {

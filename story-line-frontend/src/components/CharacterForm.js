@@ -7,6 +7,7 @@ const CharacterForm = (props) => {
   const [sex, setsex] = useState("");
   const [history, sethistory] = useState("");
 
+  const id = window.location.pathname;
   const handlecharName = (event) => {
     setcharName(event.target.value);
   };
@@ -31,7 +32,7 @@ const CharacterForm = (props) => {
     //having trouble connecting to the action.
     props.addCharacter(character);
   };
-  console.log(props.addCharacter);
+  console.log(props);
 
   return (
     <div>

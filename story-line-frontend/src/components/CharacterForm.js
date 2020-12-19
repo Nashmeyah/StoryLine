@@ -32,7 +32,7 @@ const CharacterForm = (props) => {
     //having trouble connecting to the action.
     addCharacter(character);
   };
-  console.log(addCharacter);
+  console.log(props.addCharacter);
 
   return (
     <div>

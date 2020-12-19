@@ -1,4 +1,7 @@
 export default (state = { stories: [], loading: false }, action) => {
+  function updateObject(old, newObj) {
+    return Object.assign({}, old, newObj);
+  }
   switch (action.type) {
     case "LOADING_STORIES":
       return {
@@ -48,9 +51,16 @@ export default (state = { stories: [], loading: false }, action) => {
       };
 
     case "CHARACTER_ADDED":
+      const newChar = state.characters.concat({
+        id: action.id,
+        name: action.charName,
+        age: action.charAge,
+        sex: action.sex,
+        history: action.history,
+      });
+
       return {
-        ...state,
-        stories: [...state.stories, action.payload],
+        stories: updateObject(state, { stories: newChar }),
         loading: false,
       };
 

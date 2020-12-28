@@ -19,9 +19,7 @@ const CharacterForm = (props) => {
   const handlesethistory = (event) => {
     sethistory(event.target.value);
   };
-
   const handleOnSubmit = (event) => {
-    const id = window.location.pathname;
     event.preventDefault();
     const character = {
       charName,
@@ -30,7 +28,7 @@ const CharacterForm = (props) => {
       history,
     };
     //having trouble connecting to the action.
-    props.addCharacter(id, character);
+    props.addCharacter(character);
   };
   console.log(props);
 

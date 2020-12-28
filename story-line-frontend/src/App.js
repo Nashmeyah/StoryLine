@@ -26,15 +26,7 @@ class App extends Component {
                 <StoryForm createStory={this.props.addStory} />
               )}
             />
-            {/* <Route path="/stories/:id/characters/" component={}> */}
-            <Route
-              path="/stories/:id/characters/"
-              render={(props) => (
-                (<Character />),
-                (<CharacterForm addCharacter={this.props.addCharacter} />)
-              )}
-            />
-            {/* </Route> */}
+            <Route path="/stories/:id/characters/" component={} />
           </div>
         </Router>
       </div>

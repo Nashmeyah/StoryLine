@@ -52,7 +52,7 @@ export default (state = { stories: [], loading: false }, action) => {
 
     case "CHARACTER_ADDED":
       return {
-        characters: [...state.characters, action.payload],
+        stories: [...state.stories, action.payload],
         loading: false,
       };
 

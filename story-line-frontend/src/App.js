@@ -8,7 +8,6 @@ import Stories from "./containers/Stories";
 import Character from "./containers/Character";
 import StoryForm from "./components/StoryForm";
 import "./App.css";
-import CharacterForm from "./components/CharacterForm";
 
 class App extends Component {
   render() {

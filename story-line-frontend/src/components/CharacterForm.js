@@ -30,7 +30,7 @@ const CharacterForm = (props) => {
     //having trouble connecting to the action.
     props.addCharacter(character);
   };
-  console.log(props);
+  // console.log(props);
 
   return (
     <div>

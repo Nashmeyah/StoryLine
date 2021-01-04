@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Home from "./components/Home";
 import { connect } from "react-redux";
-import { addStory, addCharacter } from "./actions/stories";
+import { addStory } from "./actions/stories";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Stories from "./containers/Stories";
@@ -33,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, { addStory, addCharacter })(App);
+export default connect(null, { addStory })(App);

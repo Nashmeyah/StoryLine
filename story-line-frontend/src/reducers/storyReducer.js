@@ -50,12 +50,6 @@ export default (state = { stories: [], loading: false }, action) => {
         loading: true,
       };
 
-    case "CHARACTER_ADDED":
-      return {
-        stories: [...state.stories, action.payload],
-        loading: false,
-      };
-
     default:
       return state;
   }

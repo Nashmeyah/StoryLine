@@ -44,12 +44,6 @@ export default (state = { stories: [], loading: false }, action) => {
         loading: false,
       };
 
-    case "ADD_CHARACTER":
-      return {
-        ...state,
-        loading: true,
-      };
-
     default:
       return state;
   }

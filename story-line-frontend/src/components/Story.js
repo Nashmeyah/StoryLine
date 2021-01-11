@@ -5,11 +5,11 @@ const Story = (props) => {
   // console.log(props.story.characters);
   return (
     <div>
-      <h1>{props.story.title}</h1>
+      <h1 style={{ color: "white" }}>{props.story.title}</h1>
       <button id={props.story.id} onClick={props.handleClick}>
         Delete Story
       </button>
-      <p>{props.story.body}</p>
+      <p style={{ color: "white" }}>{props.story.body}</p>
       <NavLink
         to={`/stories/${props.story.id}/characters`}
         exact

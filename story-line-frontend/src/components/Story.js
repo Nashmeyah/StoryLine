@@ -10,13 +10,13 @@ const Story = (props) => {
         Delete Story
       </button>
       <p style={{ color: "white" }}>{props.story.body}</p>
-      <NavLink
+      {/* <NavLink
         to={`/stories/${props.story.id}/characters`}
         exact
         activeStyle={{ background: "blue" }}
       >
         View Characters
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 };

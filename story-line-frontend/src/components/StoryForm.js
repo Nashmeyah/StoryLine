@@ -27,7 +27,7 @@ const StoryForm = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <p>Title:</p>
+        <p style={{ color: "white" }}>Title:</p>
         <input
           type="text"
           name="title"
@@ -35,7 +35,7 @@ const StoryForm = (props) => {
           onChange={handleOnTitleChange}
         />
 
-        <p>Story Body:</p>
+        <p style={{ color: "white" }}>Story Body:</p>
         <textarea
           type="text"
           name="body"

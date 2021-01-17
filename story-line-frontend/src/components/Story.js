@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const Story = (props) => {
-  // console.log(props.story.characters);
   return (
     <div>
       <h1 style={{ color: "white" }}>{props.story.title}</h1>

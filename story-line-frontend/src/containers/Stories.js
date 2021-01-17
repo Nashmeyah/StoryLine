@@ -16,7 +16,6 @@ class Stories extends Component {
   };
 
   filterSearch = (event) => {
-    // console.log(event.target.value);
     this.setState({
       search: event.target.value,
     });
@@ -50,8 +49,6 @@ class Stories extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
-
   return {
     stories: state.storyReducer.stories,
     loading: state.storyReducer.loading,

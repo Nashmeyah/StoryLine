@@ -1,7 +1,4 @@
 export default (state = { stories: [], loading: false }, action) => {
-  function updateObject(old, newObj) {
-    return Object.assign({}, old, newObj);
-  }
   switch (action.type) {
     case "LOADING_STORIES":
       return {

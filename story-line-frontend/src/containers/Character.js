@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getStories } from "../actions/stories";
 import CharacterCard from "../components/CharacterCard";
-
 // import StoryForm from "../components/StoryForm";
 
 class Character extends Component {
   componentDidMount() {
     this.props.getStories();
-    // console.log(this.props);
   }
 
   render() {

@@ -15,3 +15,13 @@ body {
   font-size: 23px;
   padding: 10px;
 }
+
+div .homePage {
+  color: white;
+  font-Size: 30px;
+  display: flex;
+  flex-Wrap: wrap;
+  width: 500px;
+  padding: 20px;
+  margin: auto
+}

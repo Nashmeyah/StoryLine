@@ -2,19 +2,10 @@ import React from "react";
 import Header from "./Header";
 
 const Home = () => {
-  const style = {
-    color: "white",
-    fontSize: "30px",
-    display: "flex",
-    flexWrap: "wrap",
-    width: "500px",
-    padding: "20px",
-    margin: "auto",
-  };
   return (
     <div className="homePage">
       <Header />
-      <h2 style={style}>
+      <h2>
         Welcome to the StoryLine creator, this app allows you to create stories
         and share them when youre ready!
       </h2>

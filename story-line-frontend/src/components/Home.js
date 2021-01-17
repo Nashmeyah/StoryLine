@@ -12,7 +12,7 @@ const Home = () => {
     margin: "auto",
   };
   return (
-    <div>
+    <div className="homePage">
       <Header />
       <h2 style={style}>
         Welcome to the StoryLine creator, this app allows you to create stories
